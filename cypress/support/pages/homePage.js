@@ -1,3 +1,6 @@
+const constantes = require('../constantes');
+
+
 export class HomePage {
     
     constructor() {
@@ -5,6 +8,6 @@ export class HomePage {
     };
 
     clickonlineShop() {
-        cy.get(this.onlineShopLink).click();
+        cy.get(this.onlineShopLink,{timeout: constantes.TIMEOUT}).click();
     };
 };
