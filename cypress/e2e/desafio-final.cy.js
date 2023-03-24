@@ -80,8 +80,8 @@ describe('Desafío Final - Torres Gonzalo - PushingIT', () => {
         reciptPage.getNombreProductoAgregado(productosData.producto1.nombre).should('have.text',productosData.producto1.nombre);
         reciptPage.getNombreProductoAgregado(productosData.producto2.nombre).should('have.text',productosData.producto2.nombre);
         reciptPage.getCreditCardNumber().should('have.text',checkoutData.numeroTarjeta);
-        reciptPage.getTotalPrice().should('contain',('$'+(productosData.producto1.precio + productosData.producto2.precio).toString()));
-        });
+        reciptPage.getTotalPrice().should('contain',(`$${productosData.producto1.precio + productosData.producto2.precio}`));
+    });
 
     after('Borrar usuario', () =>{
         
