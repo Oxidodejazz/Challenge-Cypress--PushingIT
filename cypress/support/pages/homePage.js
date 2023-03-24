@@ -1,6 +1,5 @@
 const constantes = require('../constantes');
 
-
 export class HomePage {
     
     constructor() {

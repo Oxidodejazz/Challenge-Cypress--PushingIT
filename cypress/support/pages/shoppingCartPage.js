@@ -3,6 +3,7 @@ export class ShoppingCartPage {
     constructor() {
         this.showTotalPriceButton = 'Show total price';
         this.price = '#price';
+        this.goToCheckoutButton = "Go to Checkout"
     };
 
     getNombreProductoAgregado(producto) {
@@ -19,5 +20,9 @@ export class ShoppingCartPage {
 
     clickShowTotalPriceButton() {
         cy.contains(this.showTotalPriceButton).click();
+    };
+
+    clickGoToCheckoutButton() {
+        cy.contains(this.goToCheckoutButton).click();
     };
 };
